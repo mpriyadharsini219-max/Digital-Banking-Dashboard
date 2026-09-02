@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Banking Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <aside class="sidebar">
+            <h2>MyBank</h2>
+
+            <nav>
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Accounts</a>
+                <a href="#">Transactions</a>
+                <a href="#">Payments</a>
+                <a href="#">Settings</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <header>
+                <div>
+                    <h1>Welcome, Priya 👋</h1>
+                    <p>Here's your account overview</p>
+                </div>
+
+                <div class="profile">
+                    <span>👤</span>
+                    <span>Priya</span>
+                </div>
+            </header>
+
+            <section class="cards">
+
+                <div class="card">
+                    <p>Total Balance</p>
+                    <h2>₹85,450.00</h2>
+                    <span>Available balance</span>
+                </div>
+
+                <div class="card">
+                    <p>Income</p>
+                    <h2>₹45,000.00</h2>
+                    <span>This month</span>
+                </div>
+
+                <div class="card">
+                    <p>Expenses</p>
+                    <h2>₹18,750.00</h2>
+                    <span>This month</span>
+                </div>
+
+            </section>
+
+            <section class="content-grid">
+
+                <div class="transactions">
+                    <div class="section-header">
+                        <h2>Recent Transactions</h2>
+                        <button onclick="showAllTransactions()">View All</button>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Transaction</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="transactionTable">
+
+                            <tr>
+                                <td>Amazon</td>
+                                <td>02 Sep 2026</td>
+                                <td class="expense">-₹1,250</td>
+                                <td><span class="success">Completed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Salary</td>
+                                <td>01 Sep 2026</td>
+                                <td class="income">+₹45,000</td>
+                                <td><span class="success">Completed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Electricity Bill</td>
+                                <td>30 Aug 2026</td>
+                                <td class="expense">-₹2,450</td>
+                                <td><span class="success">Completed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Food Delivery</td>
+                                <td>28 Aug 2026</td>
+                                <td class="expense">-₹650</td>
+                                <td><span class="success">Completed</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="quick-actions">
+                    <h2>Quick Actions</h2>
+
+                    <button onclick="sendMoney()">💸 Send Money</button>
+                    <button onclick="payBill()">🧾 Pay Bills</button>
+                    <button onclick="addMoney()">➕ Add Money</button>
+                    <button onclick="downloadStatement()">📄 Statement</button>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
